@@ -11,7 +11,15 @@ class Person {
   greetWithDelay() {
     // the "this" in the greet method passed doesn't have the same context
     // as the class but the Window Object
-    setTimeout(this.greet, 1500);
+    // setTimeout(this.greet, 1500);
+
+    // Store the "this" keyword in a "that" constant
+    const that = this;
+    setTimeout(function() {
+      console.log(that);
+      console.log('My age: ' + that.age);
+    }, 1500);
+
   }
 }
 
