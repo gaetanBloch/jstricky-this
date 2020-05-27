@@ -14,12 +14,14 @@ class Person {
     // setTimeout(this.greet, 1500);
 
     // Store the "this" keyword in a "that" constant
-    const that = this;
-    setTimeout(function() {
-      console.log(that);
-      console.log('My age: ' + that.age);
-    }, 1500);
+    // const that = this;
+    // setTimeout(function() {
+    //   console.log(that);
+    //   console.log('My age: ' + that.age);
+    // }, 1500);
 
+    // Use bind to bind the "this" keyword to the same context
+    setTimeout(this.greet.bind(this), 1500);
   }
 }
 
