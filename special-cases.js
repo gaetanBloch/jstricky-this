@@ -21,7 +21,7 @@ class Person {
     // }, 1500);
 
     // Use bind to bind the "this" keyword to the same context
-    // setTimeout(this.greet.bind(this), 1500);
+    // setTimeout(this.greet.bind(this), 1500); // call(this), apply(this)
 
     // Use the fat arrow function to set up an anonymous function using the
     // same context
